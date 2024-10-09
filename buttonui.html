@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Info Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #fce4ec, #e1f5fe); /* Gradient background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #004d40;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #80cbc4;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: #004d40;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #ff6f61, #ff4081); /* Vibrant gradient for the button */
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 20px rgba(255, 64, 129, 0.5); /* Glowing shadow */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Hover animations */
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, #ff4081, #f50057); /* Brighter hover gradient */
+            box-shadow: 0 0 40px rgba(255, 64, 129, 0.8), 0 0 80px rgba(255, 64, 129, 0.3);
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        /* Creative animations */
+        input[type="submit"]::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, transparent 10.01%);
+            background-position: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            transition: opacity 0.75s, transform 0.75s;
+        }
+
+        /* Ripple effect on click */
+        input[type="submit"]:active::before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            transition: none;
+        }
+
+        /* Colorful ripple effect on click */
+        input[type="submit"]:active {
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8), rgba(255, 64, 129, 0.8), transparent);
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            input[type="submit"] {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Client Information Form</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
