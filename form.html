@@ -3,134 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Info Form</title>
+    <title>Sign-Up Form</title>
     <style>
+        /* Set background color for the body */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7fa; /* Soft cyan background */
-            padding: 20px;
+            background-color: #fdf5d0; /* Light yellow background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
         }
 
+        /* Container with shadow and form alignment */
         .form-container {
-            max-width: 500px;
-            margin: 20px auto;
-            background-color: #004d40; /* Deep teal form background */
+            position: relative;
+            box-shadow: 10px 10px 0px #f9a385; /* Shadow effect */
+            background-color: #fdf6e3;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
+            max-width: 300px;
             text-align: center;
-            color: #ffffff; /* White text for headings */
-            margin-bottom: 20px;
         }
 
-        .form-group {
-            margin-bottom: 15px;
+        /* Adjust the form and input field styling */
+        .form {
             display: flex;
             flex-direction: column;
         }
 
         label {
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #80cbc4; /* Soft teal for labels */
+            font-family: sans-serif;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #80cbc4;
-            border-radius: 5px;
-            box-sizing: border-box;
-            background-color: #00796b; /* Teal background for inputs */
-            color: #ffffff; /* White text inside inputs */
-            font-size: 15px;
-        }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        textarea:focus {
-            border-color: #4db6ac; /* Lighter teal on focus */
-            outline: none;
-            box-shadow: 0 0 8px rgba(77, 182, 172, 0.5);
-        }
-
-        input[type="submit"] {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #004d40, #26a69a); /* Gradient for the button */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        input {
+            border: 0;
+            border-bottom: 2px solid #000; /* Black underline */
+            padding: 8px;
             font-size: 16px;
-            font-weight: bold;
-            transition: transform 0.2s ease, background-color 0.3s ease;
+            margin-bottom: 20px;
+            background-color: #fdf6e3;
+            color: #000;
+            outline: none;
+            text-align: center;
+        }
+
+        /* Style the submit button */
+        button {
+            background-color: #f9a385;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-top: 10px;
+            color: #333;
+            border-radius: 4px;
+            box-shadow: 3px 3px 0px #8f91c6; /* Light shadow behind button */
         }
 
-        input[type="submit"]:hover {
-            transform: scale(1.05);
-            background: linear-gradient(135deg, #004d40, #1de9b6); /* Brighter teal on hover */
-        }
-
-        /* Make form responsive */
-        @media screen and (max-width: 600px) {
-            .form-container {
-                padding: 15px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            input[type="tel"],
-            textarea {
-                padding: 8px;
-                font-size: 14px;
-            }
-
-            input[type="submit"] {
-                padding: 10px;
-                font-size: 14px;
-            }
+        button:hover {
+            background-color: #f78961; /* Hover effect */
         }
     </style>
 </head>
 <body>
-
     <div class="form-container">
-        <h2>Client Information Form</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-
-            <input type="submit" value="Submit">
+        <form class="form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <button type="submit">Sign Up</button>
         </form>
     </div>
-
 </body>
 </html>
+
